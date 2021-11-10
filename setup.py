@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(
-    name='deep_sort',
+    name='deepsort',
     version='1.0.2',
     description='Package based on Deep SORT multi-object tracking algorithm',
     url='https://github.com/CalculatedSystems/deep_sort',
