@@ -9,5 +9,5 @@ setuptools.setup(
     install_requires=['numpy==1.21.4', 'opencv-python==4.5.4.58', 'scikit-learn==0.22.2', 'tensorflow==2.7.0'],
     author_email='erika@calculatedsystems.com',
     packages=setuptools.find_packages(),
-    zip_safe=False
+    include_package_data=True
 )
