@@ -60,11 +60,13 @@ class Track:
     features : List[ndarray]
         A cache of features. On each measurement update, the associated feature
         vector is added to this list.
+    class_name: str
+        The class of the detected object (if applicable).
 
     """
 
     def __init__(self, mean, covariance, track_id, n_init, max_age,
-                 feature=None):
+                 feature=None, class_name=None):
         self.mean = mean
         self.covariance = covariance
         self.track_id = track_id
@@ -79,6 +81,7 @@ class Track:
 
         self._n_init = n_init
         self._max_age = max_age
+        self.class_name = class_name
 
     def to_tlwh(self):
         """Get current position in bounding box format `(top left x, top left y,
